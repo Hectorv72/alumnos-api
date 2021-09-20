@@ -9,8 +9,6 @@ ctrlAlumnos.getAlumnos = async (_req, res) => {
 }
 
 ctrlAlumnos.addAlumno = async (req, res) => {
-    // console.log("a");
-    // console.log(req.body);
     const datos = req.body;
     const alumno = new Alumno(datos);
     await alumno.save();
